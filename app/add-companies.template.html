@@ -1,0 +1,13 @@
+ <h2>Companies List</h2>
+  <ul class="nav nav-tabs">
+  <li role="presentation" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+    <a href="#" [routerLink]="['/companies']">List</a>
+  </li>
+  <li role="presentation" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+    <a href="#" [routerLink]="['/companies/edit-companies']">Edit</a>
+  </li>
+  <li role="presentation" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+    <a href="#" [routerLink]="['/companies/add-companies']">Add</a>
+  </li>
+</ul>
+<p><b>Create a new companie:</b> <input type="text" name="companie_name" [(ngModel)]="companie_name"><button (click)="createCompanies(companie_name)">Save</button></p>

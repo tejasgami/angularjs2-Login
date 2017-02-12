@@ -1,0 +1,15 @@
+ <h2>Companies List</h2>
+  <ul class="nav nav-tabs">
+  <li role="presentation" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+    <a href="#" [routerLink]="['/companies']">List</a>
+  </li>
+  <li role="presentation" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+    <a href="#" [routerLink]="['/companies/edit-companies']">Edit</a>
+  </li>
+  <li role="presentation" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+    <a href="#" [routerLink]="['/companies/add-companies']">Add</a>
+  </li>
+</ul>
+<ul>
+  <li *ngFor="let companie of companies"><input type="text" name="companie-name" [(ngModel)]="companie.name"><button (click)="updateCompanies(companie)">Edit</button> </li>
+</ul>

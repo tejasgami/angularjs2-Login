@@ -1,0 +1,31 @@
+ <h2>Companies List</h2>
+  <ul class="nav nav-tabs">
+  <li role="presentation" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+    <a href="#" [routerLink]="['/companies']">List</a>
+  </li>
+  <li role="presentation" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+    <a href="#" [routerLink]="['/companies/edit-companies']">Edit</a>
+  </li>
+  <li role="presentation" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+    <a href="#" [routerLink]="['/companies/add-companies']">Add</a>
+  </li>
+</ul>
+
+<!-- <h2>Companies List</h2> -->
+
+<table class="table table-striped">
+  <thead class="thead-default">
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let companie of companies; let i=index">
+      <th scope="row"> {{i + 1}} </th>
+      <td>{{companie.name}}</td>
+      <a (click)="deleteCompanies(companie)">Delete</a>
+    </tr>
+  </tbody>
+</table>
